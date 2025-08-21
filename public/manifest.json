@@ -1,0 +1,43 @@
+{
+  "name": "MeuDia TDAH - Organize sua rotina com simplicidade",
+  "short_name": "MeuDia TDAH",
+  "description": "Aplicativo para organização pessoal voltado para pessoas com TDAH. Gerencie tarefas, hábitos e rotinas de forma simples e eficaz.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "health", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Adicionar Tarefa",
+      "short_name": "Nova Tarefa",
+      "description": "Criar uma nova tarefa rapidamente",
+      "url": "/?action=new-task",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Modo Foco",
+      "short_name": "Foco",
+      "description": "Entrar no modo foco para uma tarefa",
+      "url": "/?action=focus-mode",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

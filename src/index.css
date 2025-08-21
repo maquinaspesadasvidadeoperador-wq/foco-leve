@@ -2,95 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* MeuDia TDAH Design System - Cores calmas e acessíveis para TDAH */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - tons neutros suaves */
+    --background: 210 25% 98%;
+    --foreground: 215 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 25% 100%;
+    --card-foreground: 215 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 25% 100%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - azul calmo para foco */
+    --primary: 213 78% 55%;
+    --primary-foreground: 210 25% 98%;
+    --primary-glow: 213 78% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - verde suave para hábitos */
+    --secondary: 142 52% 96%;
+    --secondary-foreground: 142 52% 25%;
+    --success: 142 52% 45%;
+    --success-foreground: 142 52% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Estados especiais TDAH */
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 100% 95%;
+    --accent-foreground: 35 100% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Prioridades - cores específicas para tarefas */
+    --priority-high: 0 65% 60%;
+    --priority-high-foreground: 0 0% 100%;
+    --priority-normal: 213 78% 55%;
+    --priority-normal-foreground: 210 25% 98%;
+    --priority-low: 215 15% 60%;
+    --priority-low-foreground: 210 25% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Energia - sistema visual para níveis de energia */
+    --energy-high: 45 93% 65%;
+    --energy-high-foreground: 45 93% 15%;
+    --energy-medium: 25 85% 60%;
+    --energy-medium-foreground: 25 85% 15%;
+    --energy-low: 213 78% 65%;
+    --energy-low-foreground: 213 78% 15%;
 
-    --radius: 0.5rem;
+    /* UI elements */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 210 20% 88%;
+    --input: 210 20% 96%;
+    --ring: 213 78% 55%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 0.75rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Gradients para feedback positivo */
+    --gradient-success: linear-gradient(135deg, hsl(142 52% 45%), hsl(142 52% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(213 78% 55%), hsl(213 78% 70%));
+    --gradient-celebration: linear-gradient(135deg, hsl(45 93% 65%), hsl(35 100% 70%));
+    
+    /* Shadows suaves */
+    --shadow-soft: 0 4px 12px -2px hsl(215 25% 15% / 0.08);
+    --shadow-focus: 0 0 0 3px hsl(213 78% 55% / 0.3);
+    --shadow-glow: 0 8px 24px -4px hsl(213 78% 55% / 0.3);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - ainda mais suave para TDAH */
+    --background: 215 25% 8%;
+    --foreground: 210 25% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 10%;
+    --card-foreground: 210 25% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 25% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary mais suave no dark */
+    --primary: 213 65% 65%;
+    --primary-foreground: 215 25% 8%;
+    --primary-glow: 213 65% 75%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 142 35% 12%;
+    --secondary-foreground: 142 35% 85%;
+    --success: 142 45% 55%;
+    --success-foreground: 142 45% 8%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 35 80% 12%;
+    --accent-foreground: 35 80% 85%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Prioridades ajustadas para dark mode */
+    --priority-high: 0 55% 55%;
+    --priority-high-foreground: 0 0% 100%;
+    --priority-normal: 213 65% 65%;
+    --priority-normal-foreground: 215 25% 8%;
+    --priority-low: 215 15% 50%;
+    --priority-low-foreground: 215 25% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Energia no dark mode */
+    --energy-high: 45 75% 55%;
+    --energy-high-foreground: 45 75% 8%;
+    --energy-medium: 25 65% 50%;
+    --energy-medium-foreground: 25 65% 8%;
+    --energy-low: 213 65% 55%;
+    --energy-low-foreground: 213 65% 8%;
+
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 15%;
+    --ring: 213 65% 65%;
+
+    /* Gradients mais suaves no dark */
+    --gradient-success: linear-gradient(135deg, hsl(142 45% 40%), hsl(142 45% 55%));
+    --gradient-primary: linear-gradient(135deg, hsl(213 65% 50%), hsl(213 65% 65%));
+    --gradient-celebration: linear-gradient(135deg, hsl(45 75% 50%), hsl(35 80% 60%));
+    
+    --shadow-soft: 0 4px 12px -2px hsl(0 0% 0% / 0.3);
+    --shadow-focus: 0 0 0 3px hsl(213 65% 65% / 0.4);
+    --shadow-glow: 0 8px 24px -4px hsl(213 65% 65% / 0.4);
   }
 }
 
@@ -100,6 +142,50 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Animations específicas para TDAH */
+  @keyframes gentle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  /* Classes utilitárias TDAH-friendly */
+  .text-gentle {
+    @apply text-muted-foreground;
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Focus states mais visíveis para TDAH */
+  *:focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background;
+    outline: none;
+  }
+
+  /* Scroll suave */
+  * {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduzir motion para quem prefere */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

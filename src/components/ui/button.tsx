@@ -18,6 +18,16 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Variantes específicas para TDAH
+        success: "bg-success text-success-foreground shadow hover:bg-success/90 active:animate-celebrate",
+        priority: "bg-priority-normal text-priority-normal-foreground shadow hover:bg-priority-normal/90",
+        "priority-high": "bg-priority-high text-priority-high-foreground shadow hover:bg-priority-high/90",
+        "priority-low": "bg-priority-low text-priority-low-foreground shadow hover:bg-priority-low/90",
+        energy: "bg-energy-medium text-energy-medium-foreground shadow hover:bg-energy-medium/90",
+        "energy-high": "bg-energy-high text-energy-high-foreground shadow hover:bg-energy-high/90",
+        "energy-low": "bg-energy-low text-energy-low-foreground shadow hover:bg-energy-low/90",
+        celebration: "bg-gradient-celebration text-white shadow-glow hover:scale-105 transition-transform active:animate-celebrate",
+        focus: "bg-gradient-primary text-white shadow-focus hover:shadow-glow transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",

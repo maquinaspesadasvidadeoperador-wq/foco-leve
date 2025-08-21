@@ -26,11 +26,16 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -52,16 +57,38 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				// Sistema de prioridades para TDAH
+				priority: {
+					high: 'hsl(var(--priority-high))',
+					'high-foreground': 'hsl(var(--priority-high-foreground))',
+					normal: 'hsl(var(--priority-normal))',
+					'normal-foreground': 'hsl(var(--priority-normal-foreground))',
+					low: 'hsl(var(--priority-low))',
+					'low-foreground': 'hsl(var(--priority-low-foreground))'
+				},
+				// Sistema de energia para TDAH
+				energy: {
+					high: 'hsl(var(--energy-high))',
+					'high-foreground': 'hsl(var(--energy-high-foreground))',
+					medium: 'hsl(var(--energy-medium))',
+					'medium-foreground': 'hsl(var(--energy-medium-foreground))',
+					low: 'hsl(var(--energy-low))',
+					'low-foreground': 'hsl(var(--energy-low-foreground))'
 				}
+			},
+			backgroundImage: {
+				'gradient-success': 'var(--gradient-success)',
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-celebration': 'var(--gradient-celebration)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'focus': 'var(--shadow-focus)',
+				'glow': 'var(--shadow-glow)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +111,59 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				// Animações específicas para TDAH - feedback positivo
+				'celebrate': {
+					'0%, 100%': {
+						transform: 'scale(1)'
+					},
+					'50%': {
+						transform: 'scale(1.05)'
+					}
+				},
+				'bounce-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-4px)'
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'pulse-soft': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px hsl(var(--primary) / 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.8), 0 0 30px hsl(var(--primary) / 0.6)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'celebrate': 'celebrate 0.6s ease-in-out',
+				'bounce-gentle': 'bounce-gentle 0.8s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.4s ease-out',
+				'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},
